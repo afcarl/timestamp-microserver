@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timestamp Microserver</title>
+
+    <link href="index.css" rel="stylesheet">
+
+</head>
+<body>
+    <div>
+        <h1>Timestmap microserver</h1>
+            <div class="usage">
+                <h2>Example usage:</h2>
+                <pre>
+                    <code class="mono">curl https://timestamp-ms.herokuapp.com/December%2015,%202015</code>
+                </pre>
+                <br>
+                <pre>
+                    <code class="mono">curl https://timestamp-ms.herokuapp.com/1450137600</code>
+                </pre>
+            </div>
+            <div>
+                <h2>Example output:</h2>
+                <pre>
+                    <code class="mono">{ "unix": 1450137600, "natural": "December 15, 2015" }</code>
+                </pre>
+            </div>
+    </div>
+</body>
+</html>

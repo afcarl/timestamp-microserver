@@ -1,7 +1,14 @@
 var express = require("express");
+var path = require("path");
 
 var app = express();
 var unix_pattern = new RegExp('[0-9]{10}');
+
+app.use(express.static("public"));
+
+app.get('/', function(req, res) {
+    res.sendFile('index.html', {root: __dirname});
+});
 
 app.get('/:time', function(req, res) {
     console.log(req.params);
@@ -12,13 +19,13 @@ app.get('/:time', function(req, res) {
     
     if (unix_pattern.test(time)) {
         date = new Date(time * 1000);
-        body = [time, format_date(date)]
+        body = {unix: time, natural: format_date(date)}
     } else {
         date = Date.parse(time);
         if (isNaN(date)) {
-            body = [null, null];
+            body = {unix: null, natural: null};
         } else {
-            body = [date/1000, time];
+            body = {unix: date/1000, natural: time};
         }
     }
     res.send(body);
@@ -68,7 +75,7 @@ function format_date(date) {
             break;
     }
     return month + " " + parts[2] + ", " + parts[3];
-}
+};
 
 app.listen(8080, function() {
     console.log("app listening on post 8080");
