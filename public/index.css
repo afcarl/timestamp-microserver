@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|BenchNine');
 
 body {
-    font-family: BenchNine;
 }
 
 .mono {
@@ -13,5 +12,6 @@ body {
 }
 
 pre {
-    margin-top: -30px;
+    margin-top: 0px;
+    display: inline-block;
 }

@@ -9,22 +9,21 @@
 </head>
 <body>
     <div>
-        <h1>Timestmap microserver</h1>
+        <h1>Timestmap Microserver</h1>
+        <p>A <a href="http://www.freecodecamp.com">freecodecamp</a> project</p>
             <div class="usage">
                 <h2>Example usage:</h2>
                 <pre>
-                    <code class="mono">curl https://timestamp-ms.herokuapp.com/December%2015,%202015</code>
-                </pre>
-                <br>
-                <pre>
-                    <code class="mono">curl https://timestamp-ms.herokuapp.com/1450137600</code>
+<code class="mono">GET /:time
+time is either in natural ( December 15, 2015 ) or in unix ( 1450137600 )
+curl https://powerful-ocean-74932.herokuapp.com/December%2015,%202015 </code>
                 </pre>
             </div>
             <div>
                 <h2>Example output:</h2>
-                <pre>
-                    <code class="mono">{ "unix": 1450137600, "natural": "December 15, 2015" }</code>
-                </pre>
+<pre>
+<code class="mono">{ "unix": 1450137600, "natural": "December 15, 2015" }</code>
+</pre>
             </div>
     </div>
 </body>
