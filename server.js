@@ -77,6 +77,6 @@ function format_date(date) {
     return month + " " + parts[2] + ", " + parts[3];
 };
 
-app.listen(8080, function() {
-    console.log("app listening on post 8080");
+app.listen(process.env.PORT || 8080, function() {
+    console.log("app listening on port " + (process.env.PORT || 8080));
 });
